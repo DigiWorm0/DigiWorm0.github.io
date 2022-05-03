@@ -1,0 +1,14 @@
+.card {
+    background-color: #1a1a1a !important;
+    text-align: center;
+    color: white !important;
+}
+
+.card-title {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.card-text {
+    font-size: 14px;
+}

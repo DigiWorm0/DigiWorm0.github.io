@@ -1,0 +1,96 @@
+h1 {
+    font-size: 58px;
+}
+
+a {
+    text-decoration: none;
+    font-weight: bold;
+    position: relative;
+}
+
+/* Link Animations */
+a::before {
+    content: "";
+    position: absolute;
+    display: block;
+    width: 100%;
+    height: 3px;
+    bottom: 0;
+    left: 0;
+    background-color: red;
+    transform: scaleX(0);
+    transition: transform 0.3s ease;
+}
+a:hover::before {
+    transform: scaleX(1);
+}
+
+.text-primary::before {
+    background-color: #0d6efd;
+}
+.text-danger::before {
+    background-color: #dc3545;
+}
+.text-success::before {
+    background-color: #198754;
+}
+.text-warning::before {
+    background-color: #ffc107;
+}
+.text-info::before {
+    background-color: #0dcaf0;
+}
+
+/* Animations */
+.slide-up {
+    animation: 0.6s ease-out 0s 1 slideUp;
+}
+
+.slide-up-delayed {
+    animation: 1s ease-out 0s 1 slideUpDelayed;
+}
+
+.fade-in {
+    animation: 2s ease-out 0s 1 fadeIn;
+}
+
+@keyframes slideUp {
+    0% {
+        opacity: 0;
+        margin-top: 30px;
+    }
+
+    100% {
+        opacity: 1;
+        margin-top: 0px;
+    }
+}
+
+@keyframes slideUpDelayed {
+    0% {
+        opacity: 0;
+        margin-top: 30px;
+    }
+    30% {
+        opacity: 0;
+        margin-top: 30px;
+    }
+
+    100% {
+        opacity: 1;
+        margin-top: 0px;
+    }
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    50% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
