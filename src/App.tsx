@@ -93,7 +93,7 @@ function App() {
                     <div className="col-md-4">
                         <Project
                             name="Lemon Quotes"
-                            description="A spinoff of BrantSteele's Hunger Game Simulator"
+                            description="A discord bot to record and share personal quotes"
                             tags={["Node", "Typescript"]}
                             link="https://github.com/DigiWorm0/LemonQuotes" />
                     </div>
