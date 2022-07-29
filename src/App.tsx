@@ -104,7 +104,7 @@ function App() {
                     <div className="col-md-4">
                         <Project
                             name="This Website"
-                            description="A portfolio website for Austin Kugler"
+                            description="A portfolio website for myself :)"
                             tags={["React", "Typescript"]}
                             link="https://github.com/DigiWorm0/DigiWorm0.github.io" />
                     </div>
