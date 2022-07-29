@@ -1,5 +1,5 @@
 # DigiWorm's Portfolio
-Made with ❤️ by [Austin Kugler](https://digiworm0.github.io/)
+Made with ❤️ by [Digi](https://digiworm0.github.io/)
 
 Built using React
 
