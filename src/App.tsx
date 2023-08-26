@@ -1,26 +1,27 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import { Container } from 'react-bootstrap';
+import HeaderSection from "./components/sections/HeaderSection";
+import ProjectsSection from "./components/sections/ProjectsSection";
+import MyProjects, { ContributedProjects } from "./models/Projects";
+import ParticleBackground from "./components/sections/ParticleBackground";
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    return (
+        <>
+            <ParticleBackground />
+            <Container>
+                <HeaderSection />
+                <ProjectsSection
+                    title="My Projects"
+                    projectList={MyProjects}
+                />
+                <ProjectsSection
+                    title="Other Contriutions"
+                    projectList={ContributedProjects}
+                />
+            </Container>
+        </>
+    );
 }
 
 export default App;
