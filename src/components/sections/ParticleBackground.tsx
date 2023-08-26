@@ -1,4 +1,4 @@
-import { useCallback } from "react";
+import React, { useCallback } from "react";
 import type { Container, Engine } from "tsparticles-engine";
 import Particles from "react-particles";
 import { loadFull } from "tsparticles";
@@ -14,6 +14,14 @@ function ParticleBackground() {
         console.log(container);
     }, []);
 
+    const isMobile = React.useMemo(() => {
+        const userAgent = navigator.userAgent.toLowerCase();
+        return userAgent.includes("mobile");
+    }, []);
+
+    if (isMobile) {
+        return null; // Don't render particles on mobile
+    }
     return (
         <FadeIn delay={1}>
             <div
@@ -39,7 +47,7 @@ function ParticleBackground() {
                                 value: "#111111",
                             },
                         },
-                        fpsLimit: 120,
+                        fpsLimit: 20,
                         interactivity: {
                             events: {
                                 onClick: {
@@ -91,7 +99,7 @@ function ParticleBackground() {
                                 value: 80,
                             },
                             opacity: {
-                                value: 0.5,
+                                value: 0.3,
                             },
                             shape: {
                                 type: "triangle",
