@@ -19,8 +19,20 @@ const MyProjects: Project[] = [
         tags: ["TypeScript", "React", "Firebase"]
     },
     {
+        name: "BlueBox",
+        description: "Web application to inspect and debug VEX robot hardware/software over UART.",
+        url: "https://github.com/UWST-Robotics/BlueBox",
+        tags: ["TypeScript", "React"]
+    },
+    {
+        name: "AutoDevil",
+        description: "Web application to create autonomous paths for VEX robots.",
+        url: "https://github.com/UWST-Robotics/AutoDevil",
+        tags: ["TypeScript", "React"]
+    },
+    {
         name: "BlitzScouter",
-        description: "Android app for users to record, analyze, and share robotics match stats.",
+        description: "Cross-platform app for users to record, analyze, and share robotics match stats.",
         url: "https://github.com/NB-Blitz/BlitzScouter",
         tags: ["TypeScript", "React Native", "Android"]
     },
@@ -29,6 +41,18 @@ const MyProjects: Project[] = [
         description: "Older version of BlitzScouter as an ASP.NET MVC web application.",
         url: "https://github.com/NB-Blitz/BlitzScouter-Old",
         tags: ["ASP.NET MVC", "SQL"]
+    },
+    {
+        name: "RoamIO",
+        description: "Cross-platform tour guide app for everywhere in the world powered by GPT-4.0.",
+        url: "https://github.com/DigiWorm0/RoamIO",
+        tags: ["TypeScript", "React Native", "AI"]
+    },
+    {
+        name: "TDX Wizard",
+        description: "Tampermonkey script to speed up common tasks in TeamDynamix.",
+        url: "https://github.com/DigiWorm0/TDXWizard",
+        tags: ["TypeScript", "Tampermonkey"]
     },
     {
         name: "AP Hunger Games",
@@ -60,16 +84,16 @@ export default MyProjects;
 
 const ContributedProjects: Project[] = [
     {
-        name: "BlitzLib",
-        description: "Java library for use in the FIRST Robotics Competition (FRC).",
-        url: "https://github.com/NB-Blitz/BlitzLibrary",
-        tags: ["Java", "Robotics"]
-    },
-    {
         name: "FRC Robot Code",
         description: "Java code for the robot used by the FIRST Robotics Competition (FRC) team, New Berlin Blitz.",
         url: "https://github.com/NB-Blitz/2022-RapidReact",
         tags: ["Java", "Robotics"]
+    },
+    {
+        name: "VEX Robot Code",
+        description: "C++ code for the robot used by the VEX-U team, Devil Bots.",
+        url: "https://github.com/UWST-Robotics/2024-2025-Vex",
+        tags: ["C++", "Robotics"]
     },
     {
         name: "Crowded Mod",
