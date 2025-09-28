@@ -1,5 +1,7 @@
 {
   "name": "digiworm0.github.io",
+  "author": "DigiWorm",
+  "homepage": "https://digiworm0.github.io/",
   "private": true,
   "version": "0.0.0",
   "type": "module",
