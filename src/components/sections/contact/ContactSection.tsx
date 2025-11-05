@@ -15,12 +15,12 @@ export default function ContactSection() {
                 <Button
                     variant="outlined"
                     color="secondary"
-                    href="mailto:DigiWorm0@pm.me"
+                    href="mailto:me@AustinKugler.me"
                     style={{marginLeft: 20}}
                     size={"small"}
                 >
                     <Email style={{verticalAlign: "middle", marginRight: 5}}/>
-                    DigiWorm0@pm.me
+                    me@AustinKugler.me
                 </Button>
 
                 <Button

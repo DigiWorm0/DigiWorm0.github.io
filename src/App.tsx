@@ -12,8 +12,11 @@ import ContactSection from "./components/sections/contact/ContactSection.tsx";
 import HomeLabSection from "./components/sections/homelab/HomeLabSection.tsx";
 import HomeLabDB from "./db/HomeLabDB.ts";
 import RobotsDB from "./db/RobotsDB.ts";
+import React from "react";
 
 function App() {
+    const shuffledSkills = React.useMemo(() => shuffle(SkillsDB), []);
+
     return (
         <Box
             sx={{
@@ -32,7 +35,7 @@ function App() {
                 }}
             >
                 <HeroSection/>
-                <SkillsSection skills={shuffle(SkillsDB)}/>
+                <SkillsSection skills={shuffledSkills}/>
 
                 <Box sx={{margin: 20}}/>
                 <ProjectsSection projects={ProjectsDB}/>

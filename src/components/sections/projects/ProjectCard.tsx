@@ -1,8 +1,10 @@
 import Project from "../../../types/Project";
 import {Interweave} from "interweave";
 import useSelectedProjectID from "../../../hooks/useSelectedProjectID";
-import {Box, ButtonBase, Typography} from "@mui/material";
+import {Box, ButtonBase, Chip, Grid, Typography} from "@mui/material";
 import React from "react";
+import SkillsDB from "../../../db/SkillsDB.ts";
+import shuffle from "../../../utils/shuffle.ts";
 
 export interface ProjectProps {
     project: Project;
@@ -12,6 +14,8 @@ function ProjectCard(props: ProjectProps) {
     const {project} = props;
     const [, setSelectedProjectID] = useSelectedProjectID();
     const [isHovered, setIsHovered] = React.useState(false);
+
+    const shuffledTools = React.useMemo(() => shuffle(project.tools), [project.tools]);
 
     return (
         <ButtonBase
@@ -58,6 +62,7 @@ function ProjectCard(props: ProjectProps) {
                         fontWeight: 'bold',
                         color: '#ffffff',
                         textShadow: '0 0 5px rgba(0, 0, 0, 0.7)',
+                        marginTop: 1
                     }}
                 >
                     {project.name}
@@ -69,6 +74,29 @@ function ProjectCard(props: ProjectProps) {
                 >
                     <Interweave content={project.shortDescription}/>
                 </span>
+                <Grid sx={{
+                    marginTop: 1,
+                    paddingLeft: 1,
+                    paddingRight: 1,
+                }}>
+                    {shuffledTools.map(tool => {
+                        const skill = SkillsDB.find(s => s.name === tool);
+
+                        return (
+                            <Chip
+                                label={tool}
+                                size={"small"}
+                                variant={"filled"}
+                                color={skill?.color ?? "primary"}
+                                sx={{
+                                    margin: 0.2,
+                                    fontSize: "0.8em",
+                                    height: 18
+                                }}
+                            />
+                        );
+                    })}
+                </Grid>
             </Box>
         </ButtonBase>
     );
