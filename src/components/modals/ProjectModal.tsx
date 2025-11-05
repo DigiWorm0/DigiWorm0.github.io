@@ -2,8 +2,8 @@ import {Interweave} from "interweave";
 import useSelectedProject from "../../hooks/useSelectedProject";
 import useSelectedProjectID from "../../hooks/useSelectedProjectID";
 import React from "react";
-import {Box, Button, Fade, Grid, Modal, Paper} from "@mui/material";
-import {GitHub, OpenInNew, YouTube} from "@mui/icons-material";
+import {Box, Button, Fade, Grid, IconButton, Modal, Paper} from "@mui/material";
+import {Close, GitHub, OpenInNew, YouTube} from "@mui/icons-material";
 import ImageThrobber from "../common/ImageThrobber.tsx";
 
 export default function ProjectModal() {
@@ -35,15 +35,43 @@ export default function ProjectModal() {
                         boxShadow: 24,
                         width: "80%",
                         maxWidth: 1000,
+
+                        maxHeight: '90vh',
+                        overflowY: 'auto',
+
                         padding: 3
                     }}
                 >
                     <Grid container>
-                        <Grid size={6}>
-                            <h2 className="fw-bold">
+
+                        {/* Header */}
+                        <Grid
+                            size={12}
+                            sx={{
+                                display: 'flex',
+                                justifyContent: 'space-between',
+                                alignItems: 'center'
+                            }}
+                        >
+                            <h2 className="fw-bold" style={{marginBottom: 0}}>
                                 {selectedProject?.name}
                             </h2>
-                            <span style={{fontSize: 16, lineHeight: "1.4rem"}}>
+
+                            <IconButton
+                                onClick={() => setIsVisible(false)}
+                                size={"large"}
+                                color={"default"}
+                            >
+                                <Close/>
+                            </IconButton>
+                        </Grid>
+
+                        {/* Content */}
+                        <Grid size={{xs: 12, sm: 6}}>
+                            <span
+                                className={"project-description"}
+                                style={{fontSize: 16, lineHeight: "1.4rem"}}
+                            >
                                 <Interweave content={selectedProject?.fullDescription || ''}/>
                             </span>
                             <Box>
@@ -91,8 +119,10 @@ export default function ProjectModal() {
                                 )}
                             </Box>
                         </Grid>
+
+                        {/* Image */}
                         <Grid
-                            size={6}
+                            size={{xs: 12, sm: 6}}
                             sx={{padding: 2}}
                         >
                             <ImageThrobber
