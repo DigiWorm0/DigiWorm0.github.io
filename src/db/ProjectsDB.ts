@@ -8,7 +8,7 @@ const ProjectsDB: Project[] = [
         name: "DevilLib",
         shortDescription: "Autonomous robotics library",
         fullDescription: `
-            <p>DevilLib is a library made by team DEVIL5 (DevilBots) at the University of Wisconsin-Stout. It's main goal is to provide a variety of tools for performing autonomous routines at VEX-U robotics competitions. These include...</p>
+            <p>DevilLib is a <b>robotics library</b> made by team DEVIL5 (DevilBots) at the University of Wisconsin-Stout. It's main goal is to provide a variety of tools for performing <b>autonomous routines</b> at VEX-U robotics competitions. These include...</p>
             <ul>
                 <li>Linear/Spline Path Planning</li>
                 <li>Pose Estimation (Odometry)</li>
@@ -52,7 +52,7 @@ const ProjectsDB: Project[] = [
     {
         id: "levelimposter",
         tags: ["Mod"],
-        tools: ["TypeScript", "React", "Unity", "C#", "Firebase"],
+        tools: ["TypeScript", "React", "C#", "Firebase"],
         name: "LevelImposter",
         shortDescription: "Web-based 2D map editing tool",
         fullDescription: `
@@ -75,7 +75,7 @@ const ProjectsDB: Project[] = [
         name: "StoutBread",
         shortDescription: "Online bread marketplace",
         fullDescription: `
-            <p>StoutBread is a small business that sells specialty bread to UW-Stout faculty, staff, students, and parents. We help manage their React website at <a href=\"https://stoutbread.com/\">StoutBread.com</a>. This is primarily used as a menu for customers to view different flavors of bread, browse through various bread merch, view latest instagram posts, and purchase bread using the instagram bot.</p>`,
+            <p>StoutBread is a small business that sells specialty bread to UW-Stout faculty, staff, students, and parents. I build and manage their <b>React website</b> at <a href=\"https://stoutbread.com/\">StoutBread.com</a>. This is primarily used as a menu for customers to view different flavors of bread, browse through various bread merch, view latest instagram posts, and purchase bread using the instagram bot.</p>`,
 
         websiteURL: "https://stoutbread.com/",
         websiteName: "Open Web App",
@@ -93,7 +93,7 @@ const ProjectsDB: Project[] = [
         name: "BlitzScouter",
         shortDescription: "Mobile data analysis & strategy app",
         fullDescription: `
-            <p>BlitzScouter is an app made with React Native that allows students at FIRST Robotics Competitions to record data and pictures about team and robot performance using customizable forms. In order to avoid using wireless 2.4GHz within the event venue, data can be shared using QR Codes, NFC, or a physical printer. Once collected by a designated user, information can be used to make informed decisions on match stretegy and alliance selection.</p>
+            <p>BlitzScouter is a <b>mobile app</b> made with React Native that allows students at <b>FIRST Robotics Competitions</b> to record data and pictures about team and robot performance using customizable forms. In order to avoid using wireless 2.4GHz within the event venue, data can be shared using <b>QR Codes</b>, <b>NFC</b>, or a physical printer. Once collected by a designated user, information can be used to make informed decisions on match stretegy and alliance selection.</p>
             <p>If cellular data is available, the app can also sync with <a href="https://www.thebluealliance.com/">The Blue Alliance</a> to provide live event data including match scores and team rankings.</p>`,
 
         websiteURL: "https://nb-blitz.github.io/",
@@ -111,7 +111,7 @@ const ProjectsDB: Project[] = [
         shortDescription: "Automation tools for IT",
         fullDescription: `
             <p>While I worked in IT at UW-Stout, we used a ticketing software called <a href="https://www.teamdynamix.com/">TeamDynamix</a>. Unfortunately, this software has a lot of weird quirks that make it awkward to use as a ticketing platform since it was actually designed as a project management solution.</p>
-            <p>As a result, I developed a UserScript called TDXWizard to add automation tools, significant UI improvements, and suggested actions based on common IT tickets. In addition, it provides customizability for any technicians to adjust their own instance.</p>`,
+            <p>As a result, I developed a UserScript called TDXWizard to add <b>automation tools</b>, significant <b>UI improvements</b>, and <b>suggested actions</b> based on common IT tickets. In addition, it provides <b>customizability</b> for any technicians to adjust their own instance.</p>`,
 
         githubURL: "https://github.com/DigiWorm0/TDXWizard",
         githubName: "View Source",
@@ -125,7 +125,7 @@ const ProjectsDB: Project[] = [
         name: "AutoDevil",
         shortDescription: "Web-based 2D path editing tool",
         fullDescription: `
-            <p>AutoDevil is a React web app for designing custom paths for autonomous routines. It utilizes bezier curves to smoothly travel between waypoints while executing actions at each point. In addition, it provides an tool for editing occupancy grids when developing path planning algorithms (such as A*).</p>`,
+            <p>AutoDevil is a <b>React web app</b> for designing custom paths for autonomous routines. It utilizes <b>bezier curves</b> to smoothly travel between waypoints while executing actions at each point. In addition, it provides an tool for editing <b>occupancy grids</b> when developing path planning algorithms <i>(such as A*)</i>.</p>`,
 
         websiteURL: "https://auto.devilbots.org/",
         websiteName: "Open Web App",
@@ -137,7 +137,7 @@ const ProjectsDB: Project[] = [
     {
         id: "auemotes",
         tags: ["Mod"],
-        tools: ["Unity", "C#"],
+        tools: ["C#"],
         name: "AU Emotes",
         shortDescription: "Custom emote engine for Among Us",
         fullDescription: `
@@ -151,7 +151,7 @@ const ProjectsDB: Project[] = [
     {
         id: "gifdecoder",
         "tags": ["Mod", "Fun"],
-        tools: ["Unity", "C#"],
+        tools: ["C#"],
         name: "GIF Decoder",
         shortDescription: "Deserializer for GIF87a and GIF89a",
         fullDescription: `
